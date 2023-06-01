@@ -1,6 +1,7 @@
 'use client';
 
 import { signIn } from 'next-auth/react';
+import { BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillGithub } from 'react-icons/ai';
 import { useState } from 'react';
@@ -88,6 +89,12 @@ const LoginModal = () => {
         label="Continue with Github"
         icon={AiFillGithub}
         onClick={() => signIn('github')}
+      />
+      <Button
+        outline
+        label="Continue with Facebook"
+        icon={BsFacebook}
+        onClick={() => signIn('facebook')}
       />
       <div className="text-neutral-500 dark:text-secondary text-center mt-4 font-light ">
         <div className="flex flex-row items-center justify-center gap-2">
