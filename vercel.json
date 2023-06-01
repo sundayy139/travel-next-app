@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/prisma",
+      "dest": ".prisma"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "api/$1"
+    }
+  ],
+  "env": {
+    "PRISMA_GENERATE_FLAG": "true"
+  }
+}
