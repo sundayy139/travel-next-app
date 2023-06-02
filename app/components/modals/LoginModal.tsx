@@ -100,7 +100,10 @@ const LoginModal = () => {
         <div className="flex flex-row items-center justify-center gap-2">
           <div>Dont have an account?</div>
           <div
-            onClick={loginModal.onClose}
+            onClick={() => {
+              loginModal.onClose();
+              registerModal.onOpen();
+            }}
             className="text-neutral-800 dark:text-primary cursor-pointer hover:underline"
           >
             Register

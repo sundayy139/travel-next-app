@@ -15,7 +15,7 @@ const DarkModeButton = () => {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <div className="bg-white dark:bg-dark-btn border-[1px] rounded-full hover:shadow-md transition dark:border-none dark:hover:bg-hover-btn">
+    <div className="bg-white dark:bg-dark-btn rounded-full hover:shadow-md transition dark:border-none dark:hover:bg-hover-btn">
       {currentTheme === 'dark' ? (
         <FaSun
           size={38}
